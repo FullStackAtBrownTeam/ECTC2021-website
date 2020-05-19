@@ -1,25 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import Layout from './Layout';
 import './App.css';
+
+const TEST_LIST = [
+  <h1>This is the first section!</h1>,
+  <div><h2>Here's another section</h2><p>Hello.... content here</p></div>
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout sections={TEST_LIST}></Layout>
   );
 }
 
