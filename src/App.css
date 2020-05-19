@@ -94,7 +94,7 @@ div.section-text {
 /* Corresponds to "Header" */
 h1 {
   font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
-  font-size: 64pt;
+  font-size: 64px;
   font-weight: 700;
   font-style: normal;
 }
@@ -102,7 +102,7 @@ h1 {
 /* Corresponds to "Body-Heading" */
 h2 {
   font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
-  font-size: 36pt;
+  font-size: 36px;
   font-weight: 700;
   font-style: normal;
 }
@@ -111,6 +111,6 @@ h2 {
 /* TODO: check usage of "body-text" class */
 p, .body-text {
   font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
-  font-size: 24pt;
+  font-size: 24px;
   font-style: normal;
 }
