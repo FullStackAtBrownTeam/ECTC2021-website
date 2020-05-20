@@ -1,28 +1,25 @@
 import React, { Component } from 'react';
-import {Navbar} from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-export class Navigation extends Component {
+export class Navigation extends Component {    
     render() {
         return (
-            <Navbar className="navigation" sticky="top">
-                
+            <Navbar collapseOnSelect className="navigation justify-content-between" expand="xl" sticky="top" > 
                 <Navbar.Brand className="nav-bar-logo">
                     <img
                         alt=" "
                         src='./ectclogo.svg'
-                        width="30"
-                        height="30"
-                        className="d-inline-block align-top"
+                        width="60"
+                        height="60"
+                        className="d-inline-block align-center"
                     />{' '}
-                    ECTC2021
+                    <ectc>ECTC2021</ectc>
                 </Navbar.Brand>
-                <Navbar.Brand className="date">
-                    February 19 - 21
-                </Navbar.Brand>
-                <Navbar.Text className="register">
-                    Register
-                </Navbar.Text>
+                <date>FEBRUARY 19 - 21</date>
+                <register>REGISTER</register>
             </Navbar>
+
         )
     }
 }

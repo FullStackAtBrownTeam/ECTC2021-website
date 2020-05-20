@@ -28,7 +28,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #011A2D;
 }
 
 @keyframes App-logo-spin {
@@ -117,10 +117,10 @@ p, .body-text {
 
 .navigation {
     background-color: transparent ;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #011A2D;
 }
 
-.Navbar.Text-date {
-  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  font-style: normal;
-}
+

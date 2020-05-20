@@ -51,7 +51,6 @@ class Layout extends Component {
             </div>
         );
     }
-
 }
 
 export default Layout;
