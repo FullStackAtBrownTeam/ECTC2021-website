@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export class Navigation extends Component {    
     render() {
@@ -20,20 +21,28 @@ export class Navigation extends Component {
                     <span id="nav-register">REGISTER</span>
                 </Navbar.Brand>
                 
-                <Navbar.Toggle aria-controls="hamburger" />
+                <Navbar.Toggle aria-controls="hamburger" >
+                    {/* <span>
+                        <FontAwesomeIcon 
+                            icon="bars" 
+                            color="#011A2D" 
+                            size="2x"
+                         />
+                    </span> */}
+                </Navbar.Toggle>
 				<Navbar.Collapse id="hamburger">
 					<Nav id="hamburger-items">
-						<Nav.Link href="#home">ABOUT</Nav.Link>
-						<Nav.Link href="#link">WORKSHOPS</Nav.Link>
-                        <Nav.Link href="#link">INSTRUCTORS</Nav.Link>
-                        <Nav.Link href="#link">TAIKO TALKS</Nav.Link>
-                        <Nav.Link href="#link">FINAL CONCERT</Nav.Link>
-                        <Nav.Link href="#link">SCHEDULE</Nav.Link>
-                        <Nav.Link href="#link">VENUES</Nav.Link>
-                        <Nav.Link href="#link">PARKING</Nav.Link>
-                        <Nav.Link href="#link">HOTELS</Nav.Link>
-                        <Nav.Link href="#link">VENDORS</Nav.Link>
-                        <Nav.Link href="#link">CONTACT</Nav.Link>
+                        <Nav.Link href="#about"><h4 className="about">ABOUT</h4></Nav.Link>
+                        <Nav.Link href="#workshops"><h4 className="workshops">WORKSHOPS</h4></Nav.Link>
+                        <Nav.Link href="#instructors"><h4 className="instructors">INSTRUCTORS</h4></Nav.Link>
+                        <Nav.Link href="#taiko-talks"><h4 className="taiko-talks">TAIKO TALKS</h4></Nav.Link>
+                        <Nav.Link href="#final-concert"><h4 className="final-concert">FINAL CONCERT</h4></Nav.Link>
+                        <Nav.Link href="#schedule"><h4 className="schedule">SCHEDULE</h4></Nav.Link>
+                        <Nav.Link href="#venues"><h4 className="venues">VENUES</h4></Nav.Link>
+                        <Nav.Link href="#parking"><h4 className="parking">PARKING</h4></Nav.Link>
+                        <Nav.Link href="#hotels"><h4 className="hotels">HOTELS</h4></Nav.Link>
+                        <Nav.Link href="#vendors"><h4 className="vendors">VENDORS</h4></Nav.Link>
+                        <Nav.Link href="#contact"><h4 className="contact">CONTACT</h4></Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
                 

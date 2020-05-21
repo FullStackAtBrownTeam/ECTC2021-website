@@ -122,15 +122,13 @@ p, .body-text {
     color: #011A2D;
     padding-left: 70px;
     padding-right: 70px;
-    padding-top: 25px;
-    padding-bottom: 30px;
-    
+    padding-top: 30px;    
 }
 
 #nav-logo {
     position: absolute;
     width: 12em;
-    top: 45px;
+    top: 50px;
     left: 75px;
     font-size: 16px
 }
@@ -138,7 +136,7 @@ p, .body-text {
 #nav-date {
     position: absolute;
     width: 12em;
-    top: 45px;
+    top: 50px;
     right: calc(50% - 5em);
     font-size: 16px
 }
@@ -146,17 +144,90 @@ p, .body-text {
 #nav-register {
     position: absolute;
     width: 12em;
-    top: 45px;
-    right: 260px;
-    font-size: 16px
+    top: 50px;
+    right: 180px;
+    font-size: 16px;
 }
 
 #hamburger {
     text-align: right;
-    color: #011A2D !important;
+    padding: 15px;
 }
 
-#hamburger-items {
-    color: #011A2D !important;
+
+.about{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
 }
 
+.workshops{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.instructors{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.taiko-talks{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.final-concert{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.schedule{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.venues{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.parking{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.hotels{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.vendors{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.contact{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
