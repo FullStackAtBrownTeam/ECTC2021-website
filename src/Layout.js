@@ -1,44 +1,34 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
+import ReactMarkdown from "react-markdown"
 import LayoutSection from "./LayoutSection"
 import Splash from "./Splash"
 
 class Layout extends Component {
 
-    // TODO: remove?
     constructor(props) {
         super(props);
         this.state = {
-            sections: this.props.sections? this.props.sections : []
+            sections: this.parseSections(this.props.sections? this.props.sections : [])
         };
     }
 
-    getLayoutSections = () => {
-        return this.state.sections.map(sectionContent => 
-            <LayoutSection content={sectionContent}>
-                {sectionContent}
-            </LayoutSection>
-        );
+    // Parse given content object into an array of {header, ref, renderedContent}
+    parseSections = (rawSections) => {
+        const sections = []
+        rawSections.forEach(rawSection => {
+            const header = rawSection.header;
+            const ref = React.createRef();
+            const renderedContent = rawSection.content.map(snippet => 
+                <ReactMarkdown source={snippet} escapeHtml={false} />
+                );
+            sections.push({header, ref, renderedContent})
+        });
+        return sections;
     }
 
-    getDefaultLayoutSections = () => {
-        return ([
-            <LayoutSection>
-                <div className="section-text">
-                    <h1>Looking back, moving forward.</h1>
-                    <p>text text text...</p>
-                </div>
-            </LayoutSection>,
-            <LayoutSection>
-                <div className="section-text">
-                    <h1>Contact</h1>
-                    <h2>Phone</h2>
-                    <p>(###)###-####</p>
-                    <br />
-                    <h2>Email</h2>
-                    <p>xxx@gendotaiko.com</p>
-                </div>
-            </LayoutSection>
-        ]);
+    renderSections = () => {
+        return this.state.sections.map(section => 
+            <LayoutSection ref={section.ref}>{section.renderedContent}</LayoutSection>);
     }
 
     // RENDER FUNCTION
@@ -46,7 +36,7 @@ class Layout extends Component {
         return (
             <div id="layout-main">
                 <Splash></Splash>
-                {this.getDefaultLayoutSections()}
+                {this.renderSections(this.state.sections)}
                 <footer></footer>
             </div>
         );

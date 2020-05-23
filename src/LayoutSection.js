@@ -6,7 +6,6 @@ class LayoutSection extends Component {
     render() {
         return (
             <div className="layout-section-container">
-                {/* {this.props.content ? this.props.content : ""} */}
                 {this.props.children}
             </div>
         );
