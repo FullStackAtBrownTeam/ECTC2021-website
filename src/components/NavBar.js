@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export class Navigation extends Component {    
     render() {
         return (
-            <Navbar collapseOnSelect expand="false" className="navigation justify-content-between" sticky="top" > 
+            <Navbar collapseOnSelect position="fixed" top="0" z-index="99999" expand="false" className="navigation justify-content-between" sticky="top" > 
                 
                 <Navbar.Brand className="nav-bar-logo">
                     <img
@@ -22,13 +21,6 @@ export class Navigation extends Component {
                 </Navbar.Brand>
                 
                 <Navbar.Toggle aria-controls="hamburger" >
-                    {/* <span>
-                        <FontAwesomeIcon 
-                            icon="bars" 
-                            color="#011A2D" 
-                            size="2x"
-                         />
-                    </span> */}
                 </Navbar.Toggle>
 				<Navbar.Collapse id="hamburger">
 					<Nav id="hamburger-items">

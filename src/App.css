@@ -116,13 +116,18 @@ p, .body-text {
 }
 
 .navigation {
-    background-color: transparent ;
+    background-color: transparent;
     font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: #011A2D;
+    position: fixed;
+    top: 0;
+    z-index: 100000;
+    box-sizing: border-box;
+    width: 100vw;
     padding-left: 70px;
     padding-right: 70px;
-    padding-top: 30px;    
+    padding-top: 30px;  
 }
 
 #nav-logo {
@@ -152,8 +157,11 @@ p, .body-text {
 #hamburger {
     text-align: right;
     padding: 15px;
+    background: rgba(247, 246, 242, 0.75);
+    width: 25vm;
+    box-sizing: border-box;
+    width: 50vw;
 }
-
 
 .about{
     color: #011A2D;
