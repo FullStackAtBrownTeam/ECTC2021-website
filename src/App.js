@@ -9,6 +9,8 @@ function App() {
   return (
     <Layout 
       sections={contentData.content? contentData.content : {}}
+      splashDesktop={contentData.splashDesktop? contentData.splashDesktop : {}}
+      splashMobile={contentData.splashMobile? contentData.splashMobile : {}}
     />
   );
 }
