@@ -3,7 +3,42 @@ import { Nav, Navbar } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export class Navigation extends Component {    
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            halfreached: false,
+            startlogo: "East Coast Taiko Conference 2021"
+
+        };
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+        console.log("reached");
+
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll=(event) => { 
+        console.log("here");
+        let scrollTop = window.pageYOffset
+            console.log(scrollTop);
+        if(scrollTop >= 1){
+            this.setState({halfreached: true, startlogo: "ECTC 2021"})
+            
+        }
+        else{
+            this.setState({halfreached: false, startlogo: "East Coast Taiko Conference 2021"})
+        }
+        console.log(this.state.halfreached)
+    }
+
     render() {
+
         return (
             <Navbar collapseOnSelect position="fixed" top="0" z-index="99999" expand="false" className="navigation justify-content-between" sticky="top" > 
                 
@@ -15,8 +50,8 @@ export class Navigation extends Component {
                         height="50"
                         className="d-inline-block align-center"
                     />{' '}
-                    <span id="nav-logo">ECTC 2021</span>
-                    <span id="nav-date">FEBRUARY 19 - 21</span>
+                    <span style={{transition:".2s"}} id="nav-logo">{this.state.startlogo}</span>
+                    <span style={{transition:".2s"}} className ={this.state.halfreached ? "" : "hidden"} id="nav-date">FEBRUARY 19-21</span>
                     <span id="nav-register">REGISTER</span>
                 </Navbar.Brand>
                 

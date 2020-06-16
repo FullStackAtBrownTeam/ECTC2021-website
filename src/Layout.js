@@ -11,6 +11,7 @@ class Layout extends Component {
             sections: this.props.sections? this.props.sections : []
         };
     }
+    
 
     getLayoutSections = () => {
         return this.state.sections.map(sectionContent => 

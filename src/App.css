@@ -131,7 +131,7 @@ p, .body-text {
 }
 
 #nav-logo {
-    position: absolute;
+    
     width: 12em;
     top: 50px;
     left: 75px;
@@ -160,6 +160,10 @@ p, .body-text {
     width: 25vm;
     box-sizing: border-box;
     width: 50vw;
+}
+
+.hidden{
+  opacity: 0;
 }
 
 .about{
