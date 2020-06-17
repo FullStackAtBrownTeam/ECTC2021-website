@@ -131,11 +131,18 @@ p, .body-text {
 }
 
 #nav-logo {
-    
+    position: absolute;
     width: 12em;
     top: 50px;
     left: 75px;
     font-size: 16px
+}
+
+#nav-startlogo {
+  width: 12em;
+  top: 50px;
+  left: 75px;
+  font-size: 16px
 }
 
 #nav-date {

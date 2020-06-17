@@ -29,7 +29,6 @@ export class Navigation extends Component {
             console.log(scrollTop);
         if(scrollTop >= 1){
             this.setState({halfreached: true, startlogo: "ECTC 2021"})
-            
         }
         else{
             this.setState({halfreached: false, startlogo: "East Coast Taiko Conference 2021"})
@@ -50,7 +49,8 @@ export class Navigation extends Component {
                         height="50"
                         className="d-inline-block align-center"
                     />{' '}
-                    <span style={{transition:".2s"}} id="nav-logo">{this.state.startlogo}</span>
+                    <span style={{transition:".2s"}} className ={this.state.halfreached ? "hidden" : ""} id="nav-startlogo">East Coast Taiko Conference 2021</span>
+                    <span style={{transition:".2s"}} className ={this.state.halfreached ? "" : "hidden"} id="nav-logo">ECTC 2021</span>
                     <span style={{transition:".2s"}} className ={this.state.halfreached ? "" : "hidden"} id="nav-date">FEBRUARY 19-21</span>
                     <span id="nav-register">REGISTER</span>
                 </Navbar.Brand>
