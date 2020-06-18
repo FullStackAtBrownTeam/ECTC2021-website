@@ -50,7 +50,7 @@ export class Navigation extends Component {
                     <span id="nav-register">REGISTER</span>
                 </Navbar.Brand>
                 
-                <Navbar.Toggle aria-controls="hamburger" >
+                <Navbar.Toggle aria-controls="hamburger" className="menuToggle" >
                 </Navbar.Toggle>
 				<Navbar.Collapse id="hamburger">
 					<Nav id="hamburger-items">
