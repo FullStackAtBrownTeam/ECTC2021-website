@@ -13,6 +13,7 @@ class Layout extends Component {
             splashMobile: this.props.splashMobile? this.props.splashMobile : "",
         };
     }
+    
 
     // Parse given content object into an array of {header, id, renderedContent, rawSection}
     parseSections = (rawSections) => {

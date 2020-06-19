@@ -28,7 +28,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #011A2D;
 }
 
 @keyframes App-logo-spin {
@@ -148,4 +148,145 @@ p, .body-text {
   font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-style: normal;
+}
+
+.navigation {
+    background-color: transparent;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #011A2D;
+    position: fixed;
+    top: 0;
+    z-index: 100000;
+    box-sizing: border-box;
+    width: 100vw;
+    padding-right: 70px;
+    padding-left: 70px;
+    padding-top: 30px;  
+}
+
+#nav-logo {
+    position: absolute;
+    width: 12em;
+    top: 48px;
+    left: 71px;
+    font-size: 16px
+}
+
+
+#nav-startlogo {
+  width: 12em;
+  top: 50px;
+  left: 75px;
+  font-size: 16px
+}
+
+#nav-date {
+    position: absolute;
+    width: 12em;
+    top: 50px;
+    right: calc(50% - 5em);
+    font-size: 16px
+}
+
+#nav-register {
+    position: absolute;
+    width: 12em;
+    top: 50px;
+    right: 180px;
+    font-size: 16px;
+}
+
+#hamburger {
+    text-align: right;
+    padding: 15px;
+    width: 25vm;
+    box-sizing: border-box;
+    width: 50vw;
+}
+
+.menuToggle:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.hidden{
+  opacity: 0;
+}
+
+.about{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.workshops{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.instructors{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.taiko-talks{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.final-concert{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.schedule{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.venues{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.parking{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.hotels{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.vendors{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.contact{
+    color: #011A2D;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
 }
