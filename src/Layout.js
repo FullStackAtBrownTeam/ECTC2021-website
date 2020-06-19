@@ -1,53 +1,49 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
+import ReactMarkdown from "react-markdown/with-html"
 import LayoutSection from "./LayoutSection"
 import Splash from "./Splash"
 
 class Layout extends Component {
 
-    // TODO: remove?
     constructor(props) {
         super(props);
         this.state = {
-            sections: this.props.sections? this.props.sections : []
+            sections: this.parseSections(this.props.sections? this.props.sections : []),
+            splashDesktop: this.props.splashDesktop? this.props.splashDesktop : "",
+            splashMobile: this.props.splashMobile? this.props.splashMobile : "",
         };
     }
     
 
-    getLayoutSections = () => {
-        return this.state.sections.map(sectionContent => 
-            <LayoutSection content={sectionContent}>
-                {sectionContent}
-            </LayoutSection>
-        );
+    // Parse given content object into an array of {header, id, renderedContent, rawSection}
+    parseSections = (rawSections) => {
+        const sections = []
+        rawSections.forEach((rawSection, i) => {
+            const header = rawSection.header;
+            const id = "section-" + i;
+            const renderedContent = <ReactMarkdown source={rawSection.content.join("\n\n")} escapeHtml={false}/>
+            sections.push({header, id, renderedContent, rawSection})
+        });
+        return sections;
     }
 
-    getDefaultLayoutSections = () => {
-        return ([
-            <LayoutSection>
-                <div className="section-text">
-                    <h1>Looking back, moving forward.</h1>
-                    <p>text text text...</p>
-                </div>
-            </LayoutSection>,
-            <LayoutSection>
-                <div className="section-text">
-                    <h1>Contact</h1>
-                    <h2>Phone</h2>
-                    <p>(###)###-####</p>
-                    <br />
-                    <h2>Email</h2>
-                    <p>xxx@gendotaiko.com</p>
-                </div>
+    renderSections = () => {
+        return this.state.sections.map(section => 
+            <LayoutSection sectionName={section.header} rawSection={section.rawSection} sectionID={section.id}>
+                {section.renderedContent}
             </LayoutSection>
-        ]);
+        );
     }
 
     // RENDER FUNCTION
     render() {
         return (
             <div id="layout-main">
-                <Splash></Splash>
-                {this.getDefaultLayoutSections()}
+                <Splash>
+                    <img id="splash-center-desktop" alt="" src={this.state.splashDesktop.centerImage}></img>
+                    <img id="splash-center-mobile" alt="" src={this.state.splashMobile.centerImage}></img>
+                </Splash>
+                {this.renderSections(this.state.sections)}
                 <footer></footer>
             </div>
         );
