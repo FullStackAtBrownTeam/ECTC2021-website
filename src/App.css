@@ -1,0 +1,295 @@
+/* REACT DEFAULT STYLES */
+/* TODO: REMOVE LATER */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #011a2d;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* MENU, HEADER, AND FOOTER */
+
+footer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 20vh;
+
+  background: #011a2d;
+}
+
+/* LAYOUT STYLING */
+
+/* TODO: doesn't seem to be valid */
+@import url("https://use.typekit.net/eaa8yxn.css");
+
+#layout-main {
+  /* Move to body? */
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+
+  background: #f7f6f2;
+  color: #011a2d;
+
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+}
+
+#splash-container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* FOR RENDERING DEBUGGING, REMOVE LATER */
+  /* border: 10px dashed #37495752; */
+}
+
+#splash-center-desktop {
+  width: 96vw;
+}
+
+#splash-center-mobile {
+  display: none; /* TODO: ell */
+}
+
+/* LAYOUT SECTION STYLING */
+
+.layout-section-container {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5vh 12.5vw;
+  padding-top: 20vh;
+}
+
+div.section-text {
+  width: 32vw;
+}
+
+div.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.about-section > * {
+  grid-column: 1;
+}
+
+/* IMAGE STYLING */
+
+#about-us-image-div {
+  grid-column: 2;
+  width: 100%;
+  margin-left: 5vw;
+}
+
+#about-us-image {
+  width: 100%;
+}
+
+/* TEXT STYLING */
+
+/* Corresponds to "Header" */
+h1 {
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Corresponds to "Body-Heading" */
+h2 {
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Corresponds to "Body-Text" */
+/* TODO: check usage of "body-text" class */
+p,
+.body-text {
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+}
+
+.navigation {
+  background-color: rgba(247, 246, 242, 0.7);
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #011a2d;
+  position: fixed;
+  top: 0;
+  z-index: 100000;
+  box-sizing: border-box;
+  width: 100vw;
+  padding-right: 70px;
+  padding-left: 70px;
+  padding-top: 30px;
+}
+.navbar-toggler:not(:disabled):not(.disabled) {
+  border: none;
+}
+#nav-logo {
+  position: absolute;
+  width: 12em;
+  top: 48px;
+  left: 71px;
+  font-size: 16px;
+}
+
+#nav-startlogo {
+  width: 12em;
+  top: 50px;
+  left: 75px;
+  font-size: 16px;
+}
+
+#nav-date {
+  position: absolute;
+  width: 12em;
+  top: 50px;
+  right: calc(50% - 5em);
+  font-size: 16px;
+}
+
+#nav-register {
+  position: absolute;
+  width: 12em;
+  top: 50px;
+  right: 180px;
+  font-size: 16px;
+}
+
+#hamburger {
+  text-align: right;
+  padding: 15px;
+  width: 25vm;
+  box-sizing: border-box;
+  width: 50vw;
+  border: none;
+}
+
+.menuToggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.about {
+  color: #011a2d;
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.workshops {
+  color: #011a2d;
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.instructors {
+  color: #011a2d;
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.taiko-talks {
+  color: #011a2d;
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.final-concert {
+  color: #011a2d;
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.schedule {
+  color: #011a2d;
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.venues {
+  color: #011a2d;
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.parking {
+  color: #011a2d;
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.hotels {
+  color: #011a2d;
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.vendors {
+  color: #011a2d;
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.contact {
+  color: #011a2d;
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
