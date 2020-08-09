@@ -6,20 +6,41 @@ class Splash extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            centerImage: this.props.centerImage,
-            additionalImages: this.props.additionalImages? this.props.additionalImages : []
+            additionalImagesMobile: this.props.additionalImagesMobile? this.props.additionalImagesMobile : [],
+            additionalImagesDesktop: this.props.additionalImagesDesktop? this.props.additionalImagesDesktop : []
         };
+        console.log(this.state);
     }
 
-    // TODO: add support for additional images
-    // TODO: add alt field
+    renderAdditionalImagesDesktop = () => {
+        return this.state.additionalImagesDesktop.map((imgData) => {
+            return <img 
+                id={imgData.id? imgData.id : ""} 
+                class="asset-desktop"
+                src={imgData.source}
+                alt=""
+                style={imgData.style? imgData.style : {}} />
+        });
+    }
+
+    renderAdditionalImagesMobile = () => {
+        return this.state.additionalImagesMobile.map((imgData) => {
+            return <img 
+                id={imgData.id? imgData.id : ""} 
+                class="asset-mobile"
+                src={imgData.source}
+                alt=""
+                style={imgData.style? imgData.style : {}} />
+        });
+    }
 
     // RENDER FUNCTION
     render() {
         return (
             <div id="splash-container">
-                {/* {this.state.centerImage? <img className="splash-center-image" alt=""></img> : ""} */}
                 {this.props.children}
+                {this.renderAdditionalImagesDesktop()}
+                {this.renderAdditionalImagesMobile()}
             </div>
         );
     }

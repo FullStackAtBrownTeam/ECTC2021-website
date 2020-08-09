@@ -5,20 +5,123 @@
 
     "splashDesktop": {
         "centerImage": "/assets/animation-desktop.gif",
-        "additionalImages": []
+        "additionalImages": [
+            {
+                "source": "/assets/asset-13.svg",
+                "style": {
+                    "position": "absolute",
+                    "top": "20vh",
+                    "left": "30vw",
+                    "width": "5vw"
+                }
+            },
+            {
+                "source": "/assets/asset-12.svg",
+                "style": {
+                    "position": "absolute",
+                    "top": "75vh",
+                    "left": "40vw",
+                    "width": "3vw"
+                }
+            },
+            {
+                "source": "/assets/asset-11r.svg",
+                "style": {
+                    "position": "absolute",
+                    "top": "57vh",
+                    "left": "8vw",
+                    "width": "9vw"
+                }
+            },
+            {
+                "source": "/assets/asset-10r.svg",
+                "style": {
+                    "position": "absolute",
+                    "top": "13vh",
+                    "right": "30vw",
+                    "width": "4vw"
+                }
+            },
+            {
+                "source": "/assets/asset-11.svg",
+                "style": {
+                    "position": "absolute",
+                    "top": "20vh",
+                    "right": "10vw",
+                    "width": "7vw"
+                }
+            },
+            {
+                "source": "/assets/asset-12r.svg",
+                "style": {
+                    "position": "absolute",
+                    "top": "80vh",
+                    "right": "25vw",
+                    "width": "5vw"
+                }
+            }
+        ]
     },
     "splashMobile": {
         "centerImage": "/assets/animation-mobile.gif",
-        "additionalImages": []
+        "additionalImages": [
+            {
+                "source": "/assets/asset-13.svg",
+                "style": {
+                    "position": "absolute",
+                    "top": "8vh",
+                    "left": "30vw",
+                    "width": "10vw"
+                }
+            },
+            {
+                "source": "/assets/asset-11r.svg",
+                "style": {
+                    "position": "absolute",
+                    "top": "20vh",
+                    "left": "15vw",
+                    "width": "7vw"
+                }
+            },
+            {
+                "source": "/assets/asset-12r.svg",
+                "style": {
+                    "position": "absolute",
+                    "top": "33vh",
+                    "right": "20vw",
+                    "width": "9vw"
+                }
+            },
+            {
+                "source": "/assets/asset-10.svg",
+                "style": {
+                    "position": "absolute",
+                    "top": "42vh",
+                    "right": "8vw",
+                    "width": "17vw"
+                }
+            },
+            {
+                "source": "/assets/asset-13.svg",
+                "style": {
+                    "position": "absolute",
+                    "top": "100vh",
+                    "right": "33vw",
+                    "width": "6vw"
+                }
+            }
+        ]
     },
 
     "content": [
 
         {
             "header": "About",
+            "type": "html",
             "minHeight": "80vh",
-            "className": "two-col about-section",
             "content": [
+
+                "<div class='layout-section-box about-section'>",
 
                 "<div>",
 
@@ -32,28 +135,84 @@
 
                 "</div>",
 
-                "<div id='about-us-image-div'><img src='/assets/group-asset-1.svg' alt='' class='about-us-image'></img></div>"
+                "<div id='about-us-image-div'><img src='/assets/group-asset-1.svg' alt='' id='about-us-image'></img></div>",
+
+                "</div>"
 
             ]
         },
 
         {
             "header": "Contact",
+            "type": "html",
             "content": [
-                "# Contact",
-                "## Phone",
-                "(###) ### - ####",
-                "<br />",
-                "## Email",
-                "email@example.com"
+                "<div class='layout-section-box'>",
+                "<h1>Contact</h1>",
+
+                "<div id='contact-grid'>",
+
+                "<div>",
+                "<h2>Phone</h2>",
+                "<p>(401) - 489 - 1931</p>",
+                "</div>",
+                
+                "<div>",
+                "<h2>Email</h2>",
+                "<p>contact@gendotaiko.com</p>",
+                "</div>",
+
+                "<div>",
+                "<h2>Social Media</h2>",
+                "<div id='contact-social-media-grid'>",
+                    "<p><a>Facebook</a></p>",
+                    "<p><a>Instagram</a></p>",
+                "</div>",
+                "</div>",
+
+                "</div>",
+
+                "</div>"
+            ],
+            "additionalImages": [
+                {
+                    "source": "/assets/asset-13.svg",
+                    "style": {
+                        "position": "absolute",
+                        "top": "3vh",
+                        "left": "5vw",
+                        "width": "4vw"
+                    }
+                },
+                {
+                    "source": "/assets/asset-12r.svg",
+                    "style": {
+                        "position": "absolute",
+                        "top": "20vh",
+                        "left": "45vw",
+                        "width": "4vw"
+                    }
+                },
+                {
+                    "source": "/assets/asset-11r.svg",
+                    "style": {
+                        "position": "absolute",
+                        "top": "10vh",
+                        "right": "7vw",
+                        "width": "8vw"
+                    }
+                }
             ]
         },
 
         {
             "header": "Our Team",
+            "type": "html",
             "content": [
-                "# Our Team",
-                "text text text"
+                "<div class='layout-section-box'>",
+
+                "<h1>Our Team</h1>",
+
+                "</div>"
             ]
         }
 
