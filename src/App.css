@@ -151,7 +151,7 @@ p, .body-text {
 }
 
 .navigation {
-    background-color: transparent;
+    background-color: rgba(247, 246, 242, 0.7);
     font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: #011A2D;
