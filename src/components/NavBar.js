@@ -23,7 +23,7 @@ export class Navigation extends React.Component {
     window.removeEventListener("resize", this.updatePredicate);
   }
   updatePredicate() {
-    this.setState({ isDesktop: window.innerWidth > 764 });
+    this.setState({ isDesktop: window.innerWidth > 800 });
   }
 
   handleScroll = (event) => {
