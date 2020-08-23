@@ -1,8 +1,6 @@
 {
     "_comment": "Content Source for the ECTC 2020 Website",
-
-    "pageTitle": "ECTC2020",
-
+    
     "splashDesktop": {
         "centerImage": "/assets/animation-desktop.gif",
         "additionalImages": [

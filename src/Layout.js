@@ -1,8 +1,11 @@
 import React, { Component } from "react"
-import ReactMarkdown from "react-markdown/with-html"
 import LayoutSection from "./LayoutSection"
 import Splash from "./Splash"
 
+/**
+ * Component govening the entire website/page layout, contains all 
+ * parts of the website.
+ */
 class Layout extends Component {
 
     constructor(props) {
@@ -14,27 +17,14 @@ class Layout extends Component {
         };
     }
     
-
-    // Parse given content object into an array of {header, id, renderedContent, rawSection}
-    parseSections = (rawSections) => {
-        const sections = []
-        rawSections.forEach((rawSection, i) => {
-            const header = rawSection.header;
-            const id = "section-" + i;
-            const renderedContent = <ReactMarkdown source={rawSection.content.join("\n\n")} escapeHtml={false}/>
-            sections.push({header, id, renderedContent, rawSection})
-        });
-        return sections;
-    }
-
-
     // Parses source content (to feed to Layout)
     parseContent = (rawSections) => {
         const sections = [];
         rawSections.forEach((rawSection, i) => {
             const header = rawSection.header;
             const id = "section-" + i; // TODO: may not be needed
-            const renderedContent = <LayoutSection rawSection={rawSection} sectionID={id}></LayoutSection>;    
+            const renderedContent = 
+                <LayoutSection key={i} rawSection={rawSection} sectionID={id} />;    
             sections.push({header, id, renderedContent, rawSection})
         });
         return sections;
