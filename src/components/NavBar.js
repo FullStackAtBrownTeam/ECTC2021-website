@@ -90,14 +90,14 @@ export class Navigation extends React.Component {
             ></Navbar.Toggle>
             <Navbar.Collapse id="hamburger">
               <Nav id="hamburger-items">
-                <Nav.Link href="#about">
+                <Nav.Link href="#section-0">
                   <h4 className="about">ABOUT</h4>
                 </Nav.Link>
                 <Nav.Link href="#workshops">
                   <h4 className="workshops">WORKSHOPS</h4>
                 </Nav.Link>
-                <Nav.Link href="#instructors">
-                  <h4 className="instructors">INSTRUCTORS</h4>
+                <Nav.Link href="#section-2">
+                  <h4 className="instructors">OUR TEAM</h4>
                 </Nav.Link>
                 <Nav.Link href="#taiko-talks">
                   <h4 className="taiko-talks">TAIKO TALKS</h4>
@@ -149,14 +149,14 @@ export class Navigation extends React.Component {
             </Navbar.Toggle>
             <Navbar.Collapse id="hamburger">
               <Nav id="hamburger-items">
-                <Nav.Link href="#about">
+                <Nav.Link href="#section-0">
                   <h4 className="about">ABOUT</h4>
                 </Nav.Link>
                 <Nav.Link href="#workshops">
                   <h4 className="workshops">WORKSHOPS</h4>
                 </Nav.Link>
-                <Nav.Link href="#instructors">
-                  <h4 className="instructors">INSTRUCTORS</h4>
+                <Nav.Link href="#section-2">
+                  <h4 className="instructors">OUR TEAM</h4>
                 </Nav.Link>
                 <Nav.Link href="#taiko-talks">
                   <h4 className="taiko-talks">TAIKO TALKS</h4>
