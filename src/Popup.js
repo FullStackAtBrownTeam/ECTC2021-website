@@ -8,7 +8,7 @@ class Popup extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        popupShow: false
+        popupShow: false  
       };
     }
     
@@ -47,6 +47,7 @@ class Popup extends Component {
 
     // RENDER FUNCTION
     render() {
+
 
       const popupStyle = {
         backgroundColor: "blue",
@@ -96,20 +97,23 @@ var close = {
         return (
             <div>
             <div>
-            <button onClick={this.handleClick}>some team</button>
+            <button onClick={this.handleClick}>{this.props.btnName}</button>
           </div>
+
 
           <div class="modal" style={this.getPopupStyle()}>
           <div class="modal_content" style={popupStyle2}>
           <div class="modal_content" style={popupStyle3}>
             <span class="close" onClick={this.closeClick} style={close}>&times;</span>
             <div>
-            <img src={pic} style={{float: "left", height: 350, width: 250, margin: 0}}></img>
+            <img src={this.props.pic1} style={{float: "left", height: 350, width: 260, margin: 0, objectFit : "cover"}}></img>
             </div>
             <div style={{overflow: "auto", height: 320, marginTop: 8}}>
             <h3 style={{fontSize: 30, paddingLeft: "3%"}}>{this.props.name}</h3>
-            <p style={{fontSize: 15, paddingLeft: "3%", marginBottom: 35}}>{this.props.bio}</p>
+            <p style={{paddingLeft: "3%", fontStyle: "italic"}}>{this.props.titleName}</p>
 
+            <p style={{fontSize: 15, paddingLeft: "3%", marginBottom: 35}}>{this.props.bio}</p>
+            
             <h3 style={{paddingLeft: "3%"}}>{this.props.sect1titl}</h3>
             <p style={{fontSize: 15, paddingLeft: "3%", marginBottom: 35}}>{this.props.sect1desc}</p>
             <h3 style={{paddingLeft: "3%"}}>{this.props.sect2titl}</h3>
@@ -127,7 +131,10 @@ var close = {
           </div>  
         );
     }
+
 }
+
+
 
 export default Popup;
 
