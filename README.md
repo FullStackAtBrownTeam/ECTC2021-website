@@ -1,3 +1,19 @@
+# ECTC2021 Website
+
+This project was built on ReactJS for Brown/RISD's Gendo Taiko group by a team of students at Full Stack at Brown.
+
+Please see [#available-scripts] for details on building, running, and deploying the project.
+
+## Internals
+
+To customize the page title and metadata, edit the file `index.html`.
+
+To customize other site content, see the file `src/content.json`. The JSON file breaks down as such:
+- `splashDesktop`: Contains source file paths and styling for the splash page, including the center image and accompanying additional images (stored as a JSON array).
+- `splashMobile`: Similar to `splashDesktop`, but is used on the mobile version of the webpage.
+- `content`: Contains an array of objects, each representing one section of the website. Each object must contain a `"header"` field (the title of the section), a `"type"` field, and a `"content"` field. If the `type` of the section is `"html"`, then the `"content"` field is rendered as pure HTML. For convenience, the `"content"` contains an array of strings (for pretty-reading purposes), rather than a single string.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
