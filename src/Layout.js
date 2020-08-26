@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import LayoutSection from "./LayoutSection"
 import Splash from "./Splash"
+import Popup from "./Popup"
 
 /**
  * Component govening the entire website/page layout, contains all 
@@ -63,29 +64,19 @@ class Layout extends Component {
                     <img id="splash-center-mobile" alt="" src={this.state.splashMobile.centerImage}></img>
                 </Splash>
                 {this.renderSections(this.state.sections)}
+                <div id="popup-container">
+                    {numbers.map(function([btnName, picSrc, name, titleName, bio,sect1titl,sect1desc,sect2titl,sect2desc,sect3titl,sect3desc,sect4titl,sect4desc,sect5titl,sect5desc]){
+                        return (<Popup style="height: 100px;" btnName={btnName} pic1={picSrc} trigger={<button> Trigger</button>} position="right center" name={name} bio = {bio} 
+                            titleName = {titleName}
+                            sect1titl={sect1titl} sect1desc={sect1desc} 
+                            sect2titl={sect2titl} sect2desc={sect2desc} 
+                            sect3titl={sect3titl} sect3desc={sect3desc} 
+                            sect4titl={sect4titl} sect4desc={sect4desc} 
+                            sect5titl={sect5titl} sect5desc={sect5desc} ></Popup>)
+                    })}
+                </div>
                 <footer></footer>
             </div>
-
-<div id="layout-main">
-<Splash></Splash>
-
-
-<div id="popup-container">
-    {numbers.map(function([btnName, picSrc, name, titleName, bio,sect1titl,sect1desc,sect2titl,sect2desc,sect3titl,sect3desc,sect4titl,sect4desc,sect5titl,sect5desc]){
-        return (<Popup style="height: 100px;" btnName={btnName} pic1={picSrc} trigger={<button> Trigger</button>} position="right center" name={name} bio = {bio} 
-            titleName = {titleName}
-            sect1titl={sect1titl} sect1desc={sect1desc} 
-            sect2titl={sect2titl} sect2desc={sect2desc} 
-            sect3titl={sect3titl} sect3desc={sect3desc} 
-            sect4titl={sect4titl} sect4desc={sect4desc} 
-            sect5titl={sect5titl} sect5desc={sect5desc} ></Popup>)
-      })}
-</div>
-
-{this.renderSections(this.state.sections)}
-
-<footer></footer>
-</div>
         );
     }
 }

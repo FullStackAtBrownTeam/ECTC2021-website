@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from 'react-dom';
-import Button from 'muicss/lib/react/button';
-import pic from './pic.jpg'; 
 
 class Popup extends Component {
 
